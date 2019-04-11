@@ -1496,6 +1496,12 @@ def _get_builtin_table():
     _builtin_table[id(torch.nn.functional._no_grad_embedding_renorm_)] = "aten::_no_grad_embedding_renorm_"
 
     _builtin_table[id(math.floor)] = "aten::floor"
+    _builtin_table[id(math.asin)] = "aten::asin"
+    _builtin_table[id(math.atan)] = "aten::atan"
+    _builtin_table[id(math.atan2)] = "aten::atan2"
+    _builtin_table[id(math.cos)] = "aten::cos"
+    _builtin_table[id(math.sin)] = "aten::sin"
+    _builtin_table[id(math.tan)] = "aten::tan"
     _builtin_table[id(torch.nn.functional.interpolate)] = "aten::__interpolate"
     _builtin_table[id(torch.nn.functional.upsample_nearest)] = "aten::__upsample_nearest"
     _builtin_table[id(torch.nn.functional.upsample)] = "aten::__upsample"

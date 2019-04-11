@@ -1895,6 +1895,108 @@ RegisterOperators reg2({
           return 0;
         }),
 
+    Operator(
+        "aten::asin(int a) -> float",
+        [](Stack& stack) {
+          int64_t a;
+          pop(stack, a);
+          push(stack, std::asin(a));
+          return 0;
+        }),
+    Operator(
+        "aten::asin(float a) -> float",
+        [](Stack& stack) {
+          double a;
+          pop(stack, a);
+          push(stack, std::asin(a));
+          return 0;
+        }),
+
+    Operator(
+        "aten::atan(int a) -> float",
+        [](Stack& stack) {
+          int64_t a;
+          pop(stack, a);
+          push(stack, std::atan(a));
+          return 0;
+        }),
+    Operator(
+        "aten::atan(float a) -> float",
+        [](Stack& stack) {
+          double a;
+          pop(stack, a);
+          push(stack, std::atan(a));
+          return 0;
+        }),
+
+    Operator(
+        "aten::acos(int a) -> float",
+        [](Stack& stack) {
+          int64_t a;
+          pop(stack, a);
+          push(stack, std::acos(a));
+          return 0;
+        }),
+    Operator(
+        "aten::acos(float a) -> float",
+        [](Stack& stack) {
+          double a;
+          pop(stack, a);
+          push(stack, std::acos(a));
+          return 0;
+        }),
+
+    Operator(
+        "aten::sin(int a) -> float",
+        [](Stack& stack) {
+          int64_t a;
+          pop(stack, a);
+          push(stack, std::sin(a));
+          return 0;
+        }),
+    Operator(
+        "aten::sin(float a) -> float",
+        [](Stack& stack) {
+          double a;
+          pop(stack, a);
+          push(stack, std::sin(a));
+          return 0;
+        }),
+
+    Operator(
+        "aten::tan(int a) -> float",
+        [](Stack& stack) {
+          int64_t a;
+          pop(stack, a);
+          push(stack, std::tan(a));
+          return 0;
+        }),
+    Operator(
+        "aten::tan(float a) -> float",
+        [](Stack& stack) {
+          double a;
+          pop(stack, a);
+          push(stack, std::tan(a));
+          return 0;
+        }),
+
+    Operator(
+        "aten::atan2(int a, int b) -> float",
+        [](Stack& stack) {
+          int64_t a, b;
+          pop(stack, a, b);
+          push(stack, std::atan2(a, b));
+          return 0;
+        }),
+    Operator(
+        "aten::atan2(float a, float b) -> float",
+        [](Stack& stack) {
+          double a, b;
+          pop(stack, a, b);
+          push(stack, std::atan2(a, b));
+          return 0;
+        }),
+
     DEFINE_COMPARISON_OP(aten::ne, a != b),
     DEFINE_COMPARISON_OP(aten::eq, a == b),
     DEFINE_COMPARISON_OP(aten::lt, a < b),

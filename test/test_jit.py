@@ -5011,7 +5011,55 @@ a")
         def test_floor():
             return math.floor(1.5)
 
+        def test_asin_int():
+            return math.asin(1)
+
+        def test_asin_float():
+            return math.asin(0.5)
+
+        def test_atan_int():
+            return math.atan(10)
+
+        def test_atan_float():
+            return math.atan(0.5)
+
+        def test_atan2_int():
+            return math.atan2(5, 5)
+
+        def test_atan2_float():
+            return math.atan2(0.5, 0.5)
+
+        def test_cos_int():
+            return math.cos(1)
+
+        def test_cos_float():
+            return math.cos(3.14)
+
+        def test_sin_int():
+            return math.sin(1)
+
+        def test_sin_float():
+            return math.sin(3.14)
+
+        def test_tan_int():
+            return math.tan(1)
+
+        def test_tan_float():
+            return math.tan(3.14)
+
         self.checkScript(test_floor, ())
+        self.checkScript(test_asin_int, ())
+        self.checkScript(test_asin_float, ())
+        self.checkScript(test_atan_int, ())
+        self.checkScript(test_atan_float, ())
+        self.checkScript(test_atan2_int, ())
+        self.checkScript(test_atan2_float, ())
+        self.checkScript(test_cos_int, ())
+        self.checkScript(test_cos_float, ())
+        self.checkScript(test_sin_int, ())
+        self.checkScript(test_sin_float, ())
+        self.checkScript(test_tan_int, ())
+        self.checkScript(test_tan_float, ())
 
     def test_if_nest_while(self):
         def func(a, b):
